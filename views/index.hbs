@@ -1,0 +1,13 @@
+ <main>
+<h1>Iniciar sesion</h1>
+{{#if usuario}}
+<p>Hola {{nombre}} <a href="/salir">Salir</a></p>
+{{/if}}
+
+{{#unless usuario}}
+<p>Usuario desconocido</p>
+<form action="/ingresar" method="POST">
+<input type="text" name="nombre"><button>ingresar</button>
+</form>
+{{/unless}}
+ </main>
